@@ -1,27 +1,24 @@
-# Facebook Marketing BOT
-(Documentation will be updated soon. This is just copied from the previous one)
+# Facebook Page Marketing BOT
+A PyAutoGUI Solution by myself to automate mouse-cursor for Facebook Marketing. This app can send a particular message to each of your page-conversation one by one.
+This will help a Facebook page to engage more people by privately messaging them on Facebook Messanger.
 
-## Behind the Story
+## Use Cases
 Suppose,
-- Mr.A was a single guy from the last 10 years 
-- He has knocked over 1000+ girls on Facebook Messanger.
-- Only 25 of them responded and he tried to flirt with all of them.
+- You have a Facebook page like [Campus Catering](https://www.facebook.com/campus.catering)
+- Each day, they sell various kinds of dishes. 
+- So they want to send messages to every customer by telling them which food they have that day.
+- It is boring to send one by one manually.
 
-Let's say they are Ms. A, Ms. B, Ms. C ... upto Ms.Y.
-- But, Unfortunately, after a few days of flirting, everyone of them cheated on him.
-- Now finally, he has got the love his life (and also his wife) ' Ms. Z '  on his 26th attempt.
-- But he doesn't want his wife to know about his previous conversations.
-- Nowadays, sometimes, his wife checks his messanger. So he wants to delete his all the previous conversations from messanger. But is it possible to delete all those 1000+ shits manually? Probably, a big NO.
-
-So, here comes the solution, a simple few line python scripts run without requiring any kind of Facebook email, password or authentication. 
+So, here comes the solution. 
 </br>
 
-Steps to Follow
-- Open your 'Facebook Messanger for Desktop' App.
-- Place the cursor on the first chat of your messanger from where you want to start deleting. Suppose, I want to keep my last 50 person's chat. So I will place the cursor on 51th person's name.
-- Run the detect_cursor( ) method detect your mouse cursor position
+## Steps to Follow
+- Open a web browser and go to Meta Business Suite App to Manage Pages.
+- Place the cursor on the first chat of your messanger from where you want to start sending. 
+- Run the detect_cursor( ) method detect your mouse cursor position if the mouse cursor behave inappropiately.
 
 It will return something like [230,160] where (x,y) =(230,160)
+
 ```python
 def detect_cursor():
     time.sleep(6)
@@ -31,10 +28,26 @@ def detect_cursor():
     return location
 ```
 ## Demonstration
-Finally, Grab a Popcorn or a Diet-Coke and run the main method, you will see something like this :
+Finally, the code will work like below. It will select each of the conversation from left panel and send a specific message to customers.
+</br>
+</br>
+Here, I am trying to send a message like this:
+
+```text
+Hi there, This is a test message
+```
+#### N.B:
+- Here, I didn't click the send because of demonstration purpose.
+- Also, I tried not to show their faces because of their privacy purpose.
+- Sending test messages to customers may feel them disturbing and irritating.
+- This GIF might look like a manual select and copy-paste operation. But it actually works like this
+</br>
+</br>
+</br>
 
 <center>
-    <img src="./Sample/Sample_DeleteFBMessages.gif">
+    <img src="./Sample/sample_fb_marketing_bot.gif">
+<h6>Created with ❤️ by Akif Islam</h6>
+
 </center>
 
-### Created with ❤️ by Akif Islam
